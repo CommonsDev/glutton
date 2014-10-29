@@ -14,4 +14,4 @@ class ViewTests(unittest.TestCase):
         from .views import my_view
         request = testing.DummyRequest()
         info = my_view(request)
-        self.assertEqual(info['project'], 'dataserver2')
+        self.assertEqual(info['project'], 'glutton')

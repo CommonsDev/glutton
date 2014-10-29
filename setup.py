@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
@@ -16,9 +16,9 @@ requires = [
     'waitress',
     ]
 
-setup(name='dataserver',
+setup(name='glutton',
       version='0.0',
-      description='dataserver',
+      description='glutton',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -35,9 +35,9 @@ setup(name='dataserver',
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="dataserver",
+      test_suite="glutton",
       entry_points="""\
       [paste.app_factory]
-      main = dataserver:main
+      main = glutton:main
       """,
       )

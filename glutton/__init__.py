@@ -7,9 +7,9 @@ def main(global_config, **settings):
     """
     config = Configurator(settings=settings)
 
-    config.add_renderer(name='turtle', factory='dataserver.renderers.TurtleRenderer')
-    config.add_renderer(name='jsonld', factory='dataserver.renderers.JSONLDRenderer')
-    config.add_renderer(name='html', factory='dataserver.renderers.HTMLRenderer')
+    config.add_renderer(name='turtle', factory='glutton.renderers.TurtleRenderer')
+    config.add_renderer(name='jsonld', factory='glutton.renderers.JSONLDRenderer')
+    config.add_renderer(name='html', factory='glutton.renderers.HTMLRenderer')
 
     config.include('pyramid_chameleon')
     # config.include("cornice")
