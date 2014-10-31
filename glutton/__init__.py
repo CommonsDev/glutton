@@ -19,8 +19,8 @@ def main(global_config, **settings):
 
     # LDP
     config.add_route('rdfsource', r'/r{uri:.*}')
-    config.add_view(views.LDPRDFSourceResourceView, attr='get', request_method=('GET', 'HEAD', 'OPTIONS'))
-    config.add_view(views.LDPRDFSourceResourceView, attr='post', request_method=('POST',))
+    #config.add_view(views.LDPRDFSourceResourceView, attr='get', request_method=('GET', 'HEAD', 'OPTIONS'))
+    #config.add_view(views.LDPRDFSourceResourceView, attr='post', request_method=('POST',))
 
     config.scan()
     return config.make_wsgi_app()

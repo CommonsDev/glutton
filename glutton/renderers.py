@@ -23,9 +23,8 @@ class RDFRenderer:
         request = system.get("request")
         request.response.content_type = self.content_type
 
-        rendered_value = value.serialize(format=self.rdflib_format)
-
-        value.close()
+        ldpr_ref, graph = value
+        rendered_value = graph.serialize(format=self.rdflib_format, base=ldpr_ref)
 
         return rendered_value
 
