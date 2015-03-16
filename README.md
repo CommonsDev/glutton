@@ -29,7 +29,7 @@ Install
 Run (development)
 -----------------
 
-In the glutton folder, launch: `api_hour -ac glutton:Container`
+From the repository, in the glutton folder (NOT the toplevel one), launch: `api_hour -ac glutton:Container`
 
 
 Author: Guillaume Libersat <glibersat@sigill.org>

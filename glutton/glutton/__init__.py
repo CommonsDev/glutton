@@ -2,8 +2,6 @@ import logging
 import asyncio
 
 import aiohttp.web
-import aiopg
-import psycopg2.extras
 
 import api_hour
 
@@ -78,19 +76,8 @@ class Container(api_hour.Container):
     def start(self):
         yield from super().start()
         LOG.info('Starting engines...')
-        # Add your custom engines here, example with PostgreSQL:
-        # self.engines['pg'] = self.loop.create_task(aiopg.create_pool(host=self.config['engines']['pg']['host'],
-        #                                                              port=int(self.config['engines']['pg']['port']),
-        #                                                              sslmode='disable',
-        #                                                              dbname=self.config['engines']['pg']['dbname'],
-        #                                                              user=self.config['engines']['pg']['user'],
-        #                                                              password=self.config['engines']['pg']['password'],
-        #                                                              cursor_factory=psycopg2.extras.RealDictCursor,
-        #                                                              minsize=int(self.config['engines']['pg']['minsize']),
-        #                                                              maxsize=int(self.config['engines']['pg']['maxsize']),
-        #                                                              loop=self.loop))
 
-        self.engines['sparql'] = self.loop.create_task(rdf.connect(uri=("http://localhost:3030/ds/query", "http://localhost:3030/ds/update")))
+        self.engines['sparql'] = self.loop.create_task(rdf.connect(uri=("http://localhost:3030/ds/query", "http://localhost:3030/ds/update"))) # FIXME: A pool should be created
 
         yield from asyncio.wait([self.engines['sparql']], return_when=asyncio.ALL_COMPLETED)
 

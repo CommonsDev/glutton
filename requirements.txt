@@ -1,0 +1,9 @@
+ujson>=1.33
+aiohttp>=0.14.4
+api_hour>=0.6.2
+sparqlwrapper>=1.6.4
+rdflib>=4.2.0
+rdflib-jsonld>=0.3
+hashids>=1.0.3
+webob>=1.4
+awesome-slugify>=1.6.2
