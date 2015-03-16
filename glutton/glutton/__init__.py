@@ -77,7 +77,7 @@ class Container(api_hour.Container):
         yield from super().start()
         LOG.info('Starting engines...')
 
-        self.engines['sparql'] = self.loop.create_task(rdf.connect(uri=("http://localhost:3030/ds/query", "http://localhost:3030/ds/update"))) # FIXME: A pool should be created
+        self.engines['sparql'] = self.loop.create_task(rdf.connect(uri=("http://localhost:3030/glutton/query", "http://localhost:3030/glutton/update"))) # FIXME: A pool should be created
 
         yield from asyncio.wait([self.engines['sparql']], return_when=asyncio.ALL_COMPLETED)
 
