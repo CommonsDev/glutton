@@ -1,102 +1,27 @@
-import hashlib
-import functools
-from pprint import pprint
-import logging
 import asyncio
-import aiohttp.web
+import base64
+import logging
 
+from aiohttp.multidict import CIMultiDict
+from aiohttp.web import Response
+from aiohttp.web import HTTPNotFound, HTTPMethodNotAllowed, HTTPCreated, HTTPNotAcceptable
+from aiohttp.web import HTTPUnsupportedMediaType
+from rdflib import Graph, Namespace
+from rdflib.namespace import FOAF, RDF
+from rdflib.term import URIRef
 from slugify import UniqueSlugify
 import uuid
 
-from rdflib.term import URIRef
-from hashids import Hashids
-import base64
-
-from api_hour.plugins.aiohttp import JSON
-
-
-
-from rdflib import Namespace
+from ..services.data import get_model_subjects, get_subject_value, get_ldpc_content
+from ..services.data import node_exists, node_has_type, ldpr_new, ldpr_delete
+from ..utils.misc import (get_hashid_for_node, get_node_by_hashid,
+                          resolve_accept_header_to_rdflib_format,
+                          get_ldpr_from_request)
+from ..utils.decorators import method_capabilities_headers, etag
 
 LDP = Namespace("http://www.w3.org/ns/ldp#")
 
-
 LOG = logging.getLogger(__name__)
-
-
-from aiohttp.web import HTTPNotFound, HTTPMethodNotAllowed, HTTPCreated, HTTPNotAcceptable
-from aiohttp.web import HTTPUnsupportedMediaType
-from aiohttp.multidict import CIMultiDict
-from ..services.data import get_model_subjects, get_subject_value, get_ldpc_content
-from ..services.data import node_exists, node_has_type, ldpr_new, ldpr_delete
-
-import rdflib
-from rdflib.namespace import FOAF, RDF
-
-person_model = {
-    'ontology': FOAF.Person,
-    'fields': {
-        'full_name': FOAF.name,
-        'first_name': FOAF.firstName,
-        'last_name': FOAF.familyName,
-        'nick': FOAF.nickname
-    }
-}
-
-def get_hashid_for_node(node):
-    hashids = Hashids(salt="xx") # FIXME
-    byte_array = list(bytearray(node, 'utf-8'))
-    return hashids.encode(*byte_array)
-
-def get_node_by_hashid(hashid):
-    hashids = Hashids(salt="xx") # FIXME
-    decoded_array = hashids.decode(hashid)
-    return URIRef(bytes(decoded_array).decode('utf-8'))
-
-def method_capabilities_headers(view):
-    def wrapper(instance, request):
-        #request.response.headers.add("Link", "<http://www.w3.org/ns/ldp#Resource>; rel=\"type\"")
-
-        response = yield from view(instance, request)
-
-        # HTTP Methods capabilities
-        response.headers.add("Allow", ", ".join(instance.allowed_methods)) # FIXME
-
-        # HTTP POST Allowed formats
-        if 'POST' in instance.allowed_methods:
-            response.headers.add('Accept-post', ", ".join(instance.accepted_post_formats))
-
-        #response.md5_etag()
-        return response
-    return wrapper
-
-from aiohttp.web import Response
-from rdflib import Graph
-
-from webob.acceptparse import Accept
-
-def resolve_accept_header_to_rdflib_format(accept_header, fallback=True, fallback_format=('text/turtle', 'n3')):
-    content_type_mapping = {
-        'application/ld+json': 'json-ld',
-        'text/turtle': 'n3'
-    }
-
-    server_offer = (
-        ('text/turtle', 1),
-        ('application/ld+json', 0.8)
-    )
-
-    accept = Accept(accept_header)
-    content_type_match = accept.best_match(server_offer)
-
-    if content_type_match:
-        return (content_type_match, content_type_mapping[content_type_match])
-    else:
-        if fallback:
-            return fallback_format
-
-    return (None, None)
-
 
 class RDFGraphResponse(Response):
     """
@@ -106,33 +31,10 @@ class RDFGraphResponse(Response):
         selected_content_type, selected_format = resolve_accept_header_to_rdflib_format(accept_header)
         headers.add('Content-type', selected_content_type)
 
-        body = graph.serialize(format=selected_format)
+        body = graph.serialize(format=selected_format) # FIXME: Should use uJSON
 
         super().__init__(body=body, status=status, reason=reason,
                          headers=headers, content_type=selected_content_type)
-
-def etag(view): # Ripped from SANDMAN
-    def wrapped(*args, **kwargs):
-        # only for HEAD and GET requests
-        response = yield from view(*args, **kwargs)
-        etag = '"' + hashlib.md5(response.text.encode('utf-8')).hexdigest() + '"'
-        response.headers.add('ETag', etag)
-        # FIXME Port later!
-        # if_match = request.headers.get('If-Match')
-        # if_none_match = request.headers.get('If-None-Match')
-        # if if_match:
-        #     etag_list = [tag.strip() for tag in if_match.split(',')]
-        #     if etag not in etag_list and '*' not in etag_list:
-        #         rv = precondition_failed()
-        # elif if_none_match:
-        #     etag_list = [tag.strip() for tag in if_none_match.split(',')]
-        #     if etag in etag_list or '*' in etag_list:
-        #         rv = not_modified()
-        return response
-    return wrapped
-
-def get_ldpr_from_request(request):
-    return URIRef("http://{0}{1}".format(request.host, request.path).rstrip("/")) # HTTP Hardcoded, what about ssl?
 
 class LDPRDFSourceResourceView(object):
     allowed_methods = ('POST', 'GET', 'OPTIONS', 'HEAD')
@@ -290,36 +192,3 @@ class LDPRDFSourceResourceView(object):
 
         accept_header = request.headers.get('Accept', None)
         return RDFGraphResponse(response_graph, accept_header, headers=headers)
-
-@asyncio.coroutine
-def rdfapi_detail(request):
-    container = request.app['ah_container']
-    hashid = request.match_info.get('hashid')
-
-    model = person_model
-    subject = get_node_by_hashid(hashid)
-    if str(subject) in ("", None):
-        raise aiohttp.web.HTTPNotFound()
-    item = {'id': hashid, 'uri': subject}
-    for field in model['fields']:
-        item[field] = yield from get_subject_value(container, subject, predicate=model['fields'][field])
-
-    return JSON(item)
-
-@asyncio.coroutine
-def rdfapi_list(request):
-    container = request.app['ah_container']
-
-    model = person_model
-
-    items = []
-    for subject in get_model_subjects(container, model['ontology']):
-        if type(subject) == rdflib.term.BNode: # Ignore blank nodes
-            continue
-
-        item = {'id': get_hashid_for_node(subject), 'uri': subject}
-        for field in model['fields']:
-            item[field] = yield from get_subject_value(container, subject, predicate=model['fields'][field])
-        items.append(item)
-
-    return JSON(items)

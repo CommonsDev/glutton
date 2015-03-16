@@ -69,4 +69,4 @@ launch:
 Authors
 -------
 
- - Guillaume Libersat <glibersat@sigill.org>
+ - Guillaume Libersat (glibersat@sigill.org)
