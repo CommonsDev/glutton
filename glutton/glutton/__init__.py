@@ -51,20 +51,6 @@ class Container(api_hour.Container):
                                               ldprRDF_routes.post)
 
 
-        # uri_mapping = {
-        #     'person': 'xx'
-        # }
-
-        # for mapping_name in uri_mapping:
-        #     self.servers['http'].router.add_route('GET',
-        #                                           '/{0}'.format(mapping_name),
-        #                                           endpoints.index.rdfapi_list)
-        #     self.servers['http'].router.add_route('GET',
-        #                                           '/{0}/{1}'.format(mapping_name, '{hashid}'),
-        #                                           endpoints.index.rdfapi_detail)
-
-
-
     def make_servers(self):
         # This method is used by api_hour command line to bind each server on each socket
         return [self.servers['http'].make_handler(logger=self.worker.log,
@@ -77,13 +63,15 @@ class Container(api_hour.Container):
         yield from super().start()
         LOG.info('Starting engines...')
 
-        self.engines['sparql'] = self.loop.create_task(rdf.connect(uri=("http://localhost:3030/glutton/query", "http://localhost:3030/glutton/update"))) # FIXME: A pool should be created
+        if 'triplestore' in self.config['engines']:
+            ts_config = self.config['engines']['triplestore']
+            self.engines['triplestore'] = self.loop.create_task(rdf.connect(driver=ts_config['driver'],
+                                                                            uri=ts_config['uri'])) # FIXME: A pool should be created
 
-        yield from asyncio.wait([self.engines['sparql']], return_when=asyncio.ALL_COMPLETED)
+        yield from asyncio.wait([self.engines['triplestore']], return_when=asyncio.ALL_COMPLETED)
 
         # Make sure we have at least a basic root container
         yield from make_root_basic_container(self)
-
 
         LOG.info('All engines ready !')
 
@@ -91,12 +79,8 @@ class Container(api_hour.Container):
     @asyncio.coroutine
     def stop(self):
         LOG.info('Stopping engines...')
-        # Add your custom end here, example with PostgreSQL:
-        if 'pg' in self.engines:
-            if self.engines['pg'].done():
-                self.engines['pg'].result().terminate()
-                yield from self.engines['pg'].result().wait_closed()
-            else:
-                yield from self.engines['pg'].cancel()
+
+        # FIXME : Should stop the triplestore here
+
         LOG.info('All engines stopped !')
         yield from super().stop()

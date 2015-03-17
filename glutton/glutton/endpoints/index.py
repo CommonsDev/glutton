@@ -1,25 +1,25 @@
 import asyncio
 import base64
 import logging
+from urllib.parse import urljoin
 
 from aiohttp.multidict import CIMultiDict
 from aiohttp.web import Response
 from aiohttp.web import HTTPNotFound, HTTPMethodNotAllowed, HTTPCreated, HTTPNotAcceptable
 from aiohttp.web import HTTPUnsupportedMediaType
-from rdflib import Graph, Namespace
-from rdflib.namespace import FOAF, RDF
+from rdflib import Graph
+from rdflib.namespace import RDF
 from rdflib.term import URIRef
 from slugify import UniqueSlugify
 import uuid
 
-from ..services.data import get_model_subjects, get_subject_value, get_ldpc_content
-from ..services.data import node_exists, node_has_type, ldpr_new, ldpr_delete
+from ..services.data import get_ldpc_content, ldpr_new, ldpr_delete
+from ..services.data import node_exists, node_has_type
+from ..utils.decorators import method_capabilities_headers, etag
 from ..utils.misc import (get_hashid_for_node, get_node_by_hashid,
                           resolve_accept_header_to_rdflib_format,
                           get_ldpr_from_request)
-from ..utils.decorators import method_capabilities_headers, etag
-
-LDP = Namespace("http://www.w3.org/ns/ldp#")
+from ..utils.namespace import LDP
 
 LOG = logging.getLogger(__name__)
 
@@ -48,6 +48,7 @@ class LDPRDFSourceResourceView(object):
         container = request.app['ah_container']
 
         ldpr_ref = get_ldpr_from_request(request)
+        print(ldpr_ref)
 
         # Check if current node exist
         exists = yield from node_exists(container, ldpr_ref)
@@ -109,7 +110,6 @@ class LDPRDFSourceResourceView(object):
 
         ldpr_ref = ldpc_ref + "/" + future_slug
 
-
         # Parse input file
         new_graph = Graph()
         try:
@@ -131,9 +131,6 @@ class LDPRDFSourceResourceView(object):
         # Now we have the file as a temporary graph, store it to the backstore
         yield from ldpr_new(container, ldpr_ref, new_graph, ldpc_ref)
 
-
-        # new_location = "http://{0}".format(ldpr_ref) # FIXME: If ssl: https
-        print(ldpr_ref)
         headers = CIMultiDict([('Location', ldpr_ref)])
         return HTTPCreated(headers=headers)
 
@@ -143,6 +140,9 @@ class LDPRDFSourceResourceView(object):
     def head(self, request):
         """
         Output headers of GET
+
+        FIXME: This should not output the whole content but rather save
+        time by not loading all the data.
         """
         container = request.app['ah_container']
 

@@ -1,3 +1,5 @@
+from urllib.parse import urljoin
+
 from hashids import Hashids
 from rdflib.term import URIRef
 from webob.acceptparse import Accept
@@ -21,7 +23,7 @@ def get_node_by_hashid(hashid):
 
 ### HTTP
 def get_ldpr_from_request(request):
-    return URIRef("http://{0}{1}".format(request.host, request.path).rstrip("/")) # HTTP Hardcoded, what about ssl?
+    return URIRef(urljoin("http://" + request.host, request.path).rstrip("/")) # HTTP Hardcoded, what about ssl?
 
 ### RDFLIB
 def resolve_accept_header_to_rdflib_format(accept_header, fallback=True, fallback_format=('text/turtle', 'n3')):

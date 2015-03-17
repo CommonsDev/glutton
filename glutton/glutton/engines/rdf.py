@@ -1,13 +1,11 @@
 import asyncio
 
-from rdflib import Graph, ConjunctiveGraph, Dataset
-
-import SPARQLWrapper
-# SPARQLWrapper.Wrapper._returnFormatSetting = [] # DIRTY HACK for 4store
+from rdflib import Dataset
 
 @asyncio.coroutine
-def connect(uri):
-    g = Dataset("SPARQLUpdateStore")
+def connect(driver, uri):
+    g = Dataset(driver)
+    if type(uri) == list:
+        uri = tuple(uri)
     g.open(uri)
-
     return g
