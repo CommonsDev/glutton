@@ -50,6 +50,14 @@ class Container(api_hour.Container):
                                               r'/{path:.*}',
                                               ldprRDF_routes.post)
 
+        self.servers['http'].router.add_route('PATCH',
+                                              r'/{path:.*}',
+                                              ldprRDF_routes.patch)
+
+        self.servers['http'].router.add_route('PUT',
+                                              r'/{path:.*}',
+                                              ldprRDF_routes.put)
+
 
     def make_servers(self):
         # This method is used by api_hour command line to bind each server on each socket

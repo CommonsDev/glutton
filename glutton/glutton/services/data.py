@@ -1,12 +1,13 @@
 import asyncio
+from datetime import datetime
 import logging
 
 from random import randint
 import rdflib
-from rdflib.namespace import RDF, FOAF
-from rdflib import URIRef, Namespace
+from rdflib.namespace import RDF, FOAF, DCTERMS
+from rdflib import URIRef, Namespace, Literal
 
-from ..utils.namespace import LDP
+from ..utils.namespace import LDP, GLUTTON
 
 LOG = logging.getLogger(__name__)
 
@@ -33,6 +34,9 @@ def make_root_basic_container(container):
         store.add((root_ref, RDF.type, LDP.Container))
         store.add((root_ref, RDF.type, LDP.BasicContainer))
         store.add((root_ref, RDF.type, LDP.RDFSource))
+        now = datetime.now()
+        store.add((root_ref, DCTERMS.modified, Literal(now)))
+        store.add((root_ref, DCTERMS.created, Literal(now)))
         LOG.debug("created a root container.")
 
     return True
@@ -46,18 +50,34 @@ def node_exists(container, subject):
 
     return exists
 
+@asyncio.coroutine
+def node_is_deleted(container, subject):
+    store = yield from container.engines['triplestore']
+
+    LOG.debug("checking if {0} is deleted".format(subject))
+    is_deleted = (subject, GLUTTON.deleted, None) in store
+
+    return is_deleted
 
 
 @asyncio.coroutine
-def get_ldpc_content(container, ldpc_ref):
+def ldpr_modification_date(container, ldpr_ref):
     store = yield from container.engines['triplestore']
 
-    results = yield from store.triples((ldpc_ref, None, None))
+    obj = store.value(None, DCTERMS.modified)
+
+    return str(obj).encode('utf-8')
+
+@asyncio.coroutine
+def ldpr_get(container, ldpr_ref):
+    store = yield from container.engines['triplestore']
+
+    results = yield from store.triples((ldpr_ref, None, None))
 
     return results
 
 @asyncio.coroutine
-def ldpr_new(container, ldpr_ref, ldpr_graph, ldpc_ref):
+def ldpr_new(container, ldpr_ref, ldpr_graph, ldpc_ref=None):
     """
     Add a new resource (graph) to a LDPC
     """
@@ -66,19 +86,33 @@ def ldpr_new(container, ldpr_ref, ldpr_graph, ldpc_ref):
     # Mark this new LDPR as a RDF Source
     ldpr_graph.add((ldpr_ref, RDF.type, LDP.RDFSource))
 
+    # Mark this LDPR with current modification/creation date
+    now = datetime.now()
+    ldpr_graph.add((ldpr_ref, DCTERMS.modified, Literal(now)))
+    ldpr_graph.add((ldpr_ref, DCTERMS.created, Literal(now)))
+
     # Copy temp graph to datastore
     for triple in ldpr_graph.triples((ldpr_ref, None, None)):
         store.add(triple)
 
-    # Add this LDPR to the LDPC
-    store.add((ldpc_ref, LDP.contains, ldpr_ref))
+    if ldpc_ref:
+        # Make the ldpc_ref a LDPC if not already one
+        ldpc_ref_is_already_a_ldpc = yield from node_has_type(container, ldpc_ref, LDP.Container)
+        if not ldpc_ref_is_already_a_ldpc:
+            store.add((ldpc_ref, RDF.type, LDP.Container))
+            store.add((ldpc_ref, RDF.type, LDP.BasicContainer))
+
+        # Add this LDPR to the LDPC if specified
+        store.add((ldpc_ref, LDP.contains, ldpr_ref))
+        # FIXME: Should update "modified" field on LDPC
+        LOG.debug("Added LDPR {0} to LDPC {1}".format(ldpr_ref, ldpc_ref))
 
     LOG.debug("Made new LDPR {0}".format(ldpr_ref))
 
     return True
 
 @asyncio.coroutine
-def ldpr_delete(container, ldpr_ref):
+def ldpr_delete(container, ldpr_ref, mark_deleted=True, remove_containement_triples=True):
     """
     Delete a LDPR and its containement triples
     FIXME Should be transactional
@@ -86,9 +120,18 @@ def ldpr_delete(container, ldpr_ref):
     store = yield from container.engines['triplestore']
 
     # Remove any containment triplet
-    store.remove((None, LDP.contains, ldpr_ref))
+    if remove_containement_triples:
+        store.remove((None, LDP.contains, ldpr_ref))
+        # FIXME: Should update modified field on LDPC
 
     # Remove actual LDPR
     store.remove((ldpr_ref, None, None))
+
+    if mark_deleted:
+        # Mark as deleted FIXME: Not sure this is the best way to do this!
+        # FIXME: This is a possible race since we delete everything then add
+        # a triple (and we don't use transaction)
+        now = datetime.now()
+        store.add((ldpr_ref, GLUTTON.deleted, Literal(now)))
 
     return True
