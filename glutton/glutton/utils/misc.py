@@ -5,6 +5,8 @@ from hashids import Hashids
 from rdflib.term import URIRef
 from webob.acceptparse import Accept
 
+from .namespace import LDP
+
 ### HASHING
 def get_hashid_for_node(node):
     """
@@ -23,7 +25,7 @@ def get_node_by_hashid(hashid):
     return URIRef(bytes(decoded_array).decode('utf-8'))
 
 ### Graph reading
-def feed_graph_from_request(graph, request):
+def feed_graph_from_request(ldpr_ref, graph, request):
     # Use ldpr_ref as publicID so the "null relative URI" matches the future ldpr reference
     requested_content_types = request.headers.get('Content-type', None)
     selected_content_type, selected_format = resolve_accept_header_to_rdflib_format(requested_content_types, fallback=False)
@@ -31,12 +33,15 @@ def feed_graph_from_request(graph, request):
         raise HTTPUnsupportedMediaType(reason="Unknown file format: {0}. Check your Content-type header.".format(requested_content_types))
 
     data = yield from request.text()
+    print("====")
+    print(data)
+    print("====")
     graph.parse(data=data, publicID=ldpr_ref, format=selected_format)
 
-    if not (ldpr_ref, None, None) in new_graph:
+    if not (ldpr_ref, None, None) in graph:
         raise HTTPNotAcceptable(reason="Document does not contains data for this LDPR") # FIXME Is that the correct HTTP error?
 
-    return True
+    return graph
 
 
 ### HTTP

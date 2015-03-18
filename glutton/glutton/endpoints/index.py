@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 
 from aiohttp.multidict import CIMultiDict
 from aiohttp.web import Response
-from aiohttp.web import HTTPNotFound, HTTPMethodNotAllowed, HTTPCreated, HTTPNotAcceptable
+from aiohttp.web import HTTPNotFound, HTTPMethodNotAllowed, HTTPCreated, HTTPNotAcceptable, HTTPNoContent
 from aiohttp.web import HTTPUnsupportedMediaType, HTTPInternalServerError, HTTPAccepted
 import hashlib
 from rdflib import Graph
@@ -15,9 +15,9 @@ from slugify import UniqueSlugify
 import uuid
 
 from ..services.data import ldpr_get, ldpr_new, ldpr_delete, ldpr_modification_date
-from ..services.data import node_exists, node_has_type, node_is_deleted
+from ..services.data import node_exists, node_has_type, node_is_deleted, node_objects
 from ..utils.decorators import method_capabilities_headers, check_weak_etag, ldpr_exists_or_404
-from ..utils.exceptions import LDPHTTPPreconditionFailed, HTTPPreconditionRequired
+from ..utils.exceptions import HTTPPreconditionRequired, LDPHTTPConflict
 from ..utils.misc import (get_hashid_for_node, get_node_by_hashid,
                           resolve_accept_header_to_rdflib_format,
                           get_ldpr_from_request, feed_graph_from_request)
@@ -56,6 +56,7 @@ class LDPRDFSourceResourceView(object):
     accepted_post_formats = ('text/turtle', 'application/ld+json')
 
     @asyncio.coroutine
+    @ldpr_exists_or_404
     def delete(self, request):
         """
         Delete triples
@@ -63,7 +64,6 @@ class LDPRDFSourceResourceView(object):
         container = request.app['ah_container']
 
         ldpr_ref = get_ldpr_from_request(request)
-        print(ldpr_ref)
 
         # Check if current node exist
         exists = yield from node_exists(container, ldpr_ref)
@@ -77,13 +77,14 @@ class LDPRDFSourceResourceView(object):
         return Response()
 
     @asyncio.coroutine
+    @ldpr_exists_or_404
     @method_capabilities_headers
     def options(self, request):
         """
         Give capabilities of this LDPResource
         """
         yield
-        return Response()
+        return HTTPNoContent()
 
     @asyncio.coroutine
     @ldpr_exists_or_404
@@ -108,8 +109,9 @@ class LDPRDFSourceResourceView(object):
 
         exists = yield from node_exists(container, ldpr_ref)
         if not exists: # Creation
-            raise HTTPMethodNotAllowed(method='PUT', reason='use POST to create resource', allowed_methods=('POST',))
-
+            # raise HTTPMethodNotAllowed(method='PUT', reason='use POST to create resource', allowed_methods=('POST',))
+            response = yield from self.post(request)
+            return response
 
         else: # Update
             # If-match is required to prevent collisions
@@ -117,8 +119,16 @@ class LDPRDFSourceResourceView(object):
                 raise HTTPPreconditionRequired(reason="Missing If-match header")
 
             client_graph = Graph()
-            if not feed_graph_from_request(client_graph, request):
-                raise HTTPInternalServerError(reason="error while decoding client graph")
+            client_graph = yield from feed_graph_from_request(ldpr_ref, client_graph, request)
+
+            # Check if containement triple were modified (forbidden by spec)
+            old_containement = yield from node_objects(container, ldpr_ref, LDP.contains)
+            new_containement = set()
+            for obj in client_graph.objects((ldpr_ref, LDP.contains)):
+                new_containement.add(obj)
+
+            if old_containement != new_containement:
+                raise LDPHTTPConflict(reason="You are not allowed to update an LPDC's containement triples.")
 
             # FIXME Should be transactional
             yield from ldpr_delete(container, ldpr_ref, mark_deleted=False, remove_containement_triples=False)
@@ -132,7 +142,7 @@ class LDPRDFSourceResourceView(object):
         headers = CIMultiDict([('Location', ldpr_ref)])
         content_type_header = request.headers.get('Content-type', None)
 
-        response = RDFGraphResponse(response_graph, content_type_header, status=202, headers=headers) # FIXME: Harcoded 202
+        response = RDFGraphResponse(response_graph, content_type_header, status=204, headers=headers) # FIXME: Harcoded 204
         yield from response.compute_etag(request)
 
         return response
@@ -162,7 +172,7 @@ class LDPRDFSourceResourceView(object):
             future_slug = None
             while not future_slug:
                 possible_slug = slugger(suggested_slug)
-                possible_uriref = URIRef(ldpc_ref + possible_slug)
+                possible_uriref = URIRef(ldpc_ref + "/" + possible_slug)
                 exists = yield from node_exists(container, possible_uriref)
                 deleted = yield from node_is_deleted(container, possible_uriref)
                 if not exists and not deleted:
@@ -174,8 +184,7 @@ class LDPRDFSourceResourceView(object):
 
         # Parse input file
         client_graph = Graph()
-        if not feed_graph_from_request(client_graph, request):
-            raise HTTPInternalServerError(reason="graph failed to be read.")
+        client_graph = yield from feed_graph_from_request(ldpr_ref, client_graph, request)
 
         # Now we have the file as a temporary graph, store it to the backstore
         yield from ldpr_new(container, ldpr_ref, client_graph, ldpc_ref)

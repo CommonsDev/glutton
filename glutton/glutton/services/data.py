@@ -4,6 +4,7 @@ import logging
 
 from random import randint
 import rdflib
+from rdflib import Graph
 from rdflib.namespace import RDF, FOAF, DCTERMS
 from rdflib import URIRef, Namespace, Literal
 
@@ -23,25 +24,6 @@ def node_has_type(container, subject, rdftype):
     return (subject, RDF.type, rdftype) in store
 
 @asyncio.coroutine
-def make_root_basic_container(container):
-    store = yield from container.engines['triplestore']
-
-    LOG.debug("checking root container...")
-
-    root_ref = URIRef("http://localhost:8000") # FIXME Hardcoded
-
-    if not (root_ref, RDF.type, LDP.Container) in store:
-        store.add((root_ref, RDF.type, LDP.Container))
-        store.add((root_ref, RDF.type, LDP.BasicContainer))
-        store.add((root_ref, RDF.type, LDP.RDFSource))
-        now = datetime.now()
-        store.add((root_ref, DCTERMS.modified, Literal(now)))
-        store.add((root_ref, DCTERMS.created, Literal(now)))
-        LOG.debug("created a root container.")
-
-    return True
-
-@asyncio.coroutine
 def node_exists(container, subject):
     store = yield from container.engines['triplestore']
 
@@ -59,6 +41,15 @@ def node_is_deleted(container, subject):
 
     return is_deleted
 
+@asyncio.coroutine
+def node_objects(container, subject, predicate):
+    store = yield from container.engines['triplestore']
+
+    values = set()
+    for obj in store.objects(subject, predicate):
+        values.add(obj)
+
+    return values
 
 @asyncio.coroutine
 def ldpr_modification_date(container, ldpr_ref):
@@ -100,6 +91,7 @@ def ldpr_new(container, ldpr_ref, ldpr_graph, ldpc_ref=None):
         ldpc_ref_is_already_a_ldpc = yield from node_has_type(container, ldpc_ref, LDP.Container)
         if not ldpc_ref_is_already_a_ldpc:
             store.add((ldpc_ref, RDF.type, LDP.Container))
+            store.add((ldpc_ref, RDF.type, LDP.RDFSource))
             store.add((ldpc_ref, RDF.type, LDP.BasicContainer))
 
         # Add this LDPR to the LDPC if specified

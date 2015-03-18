@@ -8,8 +8,6 @@ import api_hour
 from .engines import rdf
 from . import endpoints
 
-from .services.data import make_root_basic_container
-
 LOG = logging.getLogger(__name__)
 
 class Container(api_hour.Container):
@@ -77,9 +75,6 @@ class Container(api_hour.Container):
                                                                             uri=ts_config['uri'])) # FIXME: A pool should be created
 
         yield from asyncio.wait([self.engines['triplestore']], return_when=asyncio.ALL_COMPLETED)
-
-        # Make sure we have at least a basic root container
-        yield from make_root_basic_container(self)
 
         LOG.info('All engines ready !')
 
