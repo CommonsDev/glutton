@@ -1,0 +1,1668 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.021Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b2",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ConformsRdfSourceLdpResource"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.053Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b100",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.027Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.putReplaceResource(RdfSourceTest.java:573)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutSimpleUpdate(RdfSourceTest.java:158)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b101",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b102",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PutRequiresIfMatch"
+  }, {
+    "@id" : "_:b102",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.042Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b103",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b104",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ContainsRdfType"
+  }, {
+    "@id" : "_:b104",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.052Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b105",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.051Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b106",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.076Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b107",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b24",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RestrictUriReUseNoSlug"
+  }, {
+    "@id" : "_:b108",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b109",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ConditionFailedStatusCode"
+  }, {
+    "@id" : "_:b109",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.083Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b12",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-GetResourceAsTurtleNoAccept"
+  }, {
+    "@id" : "_:b110",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.083Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b111",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b112",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-GetResponseHeaders"
+  }, {
+    "@id" : "_:b112",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.011Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b113",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.023Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b114",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b115",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-ETagHeadersHead"
+  }, {
+    "@id" : "_:b115",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.033Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b116",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b117",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PostNoSlug"
+  }, {
+    "@id" : "_:b117",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.049Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b118",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.049Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b119",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.055Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.078Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b120",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b121",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ResponsePropertiesNotPersisted"
+  }, {
+    "@id" : "_:b121",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.056Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b122",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b48",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PostJsonLd"
+  }, {
+    "@id" : "_:b123",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.08Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b124",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b125",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-Head"
+  }, {
+    "@id" : "_:b125",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.088Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b126",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.019Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b127",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.031Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b128",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b5",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ConformsRdfSourceLdpResource"
+  }, {
+    "@id" : "_:b129",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b57",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-GetResourceAcceptTurtle"
+  }, {
+    "@id" : "_:b13",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.084Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b130",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.047Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b131",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.044Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.test4xxErrorHasResponseBody(RdfSourceTest.java:424)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b132",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b10",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-OptionsAllowHeader"
+  }, {
+    "@id" : "_:b133",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.078Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b134",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b13",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PostContainer"
+  }, {
+    "@id" : "_:b135",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b14",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PublishConstraintsUnknownProp"
+  }, {
+    "@id" : "_:b136",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.012Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: containerAsResource is null\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testRequestedInteractionModelHeaders(CommonContainerTest.java:351)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b137",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.026Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsReadOnlyProp(RdfSourceTest.java:358)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b138",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b68",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutReplacesResource"
+  }, {
+    "@id" : "_:b139",
+    "@type" : "foaf:Person",
+    "foaf:name" : "Guillaume Libersat"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.013Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxConstrainedBy(RdfSourceTest.java:490)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsUnknownProp(RdfSourceTest.java:380)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b140",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b20",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutReadOnlyProperties4xxStatus"
+  }, {
+    "@id" : "_:b141",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.041Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testReUseVocabularies(RdfSourceTest.java:232)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b142",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b23",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-AcceptTurtle"
+  }, {
+    "@id" : "_:b143",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.057Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b144",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.082Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b145",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b29",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-LdpLinkHeader"
+  }, {
+    "@id" : "_:b146",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.089Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b147",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b32",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostResourceAndCheckLink"
+  }, {
+    "@id" : "_:b148",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.011Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b149",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.022Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutPropertiesNotPersisted(RdfSourceTest.java:445)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b16",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PreconditionRequiredStatusCode"
+  }, {
+    "@id" : "_:b150",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b37",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-GetResource"
+  }, {
+    "@id" : "_:b151",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b86",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RequestedInteractionModelCreateNotAllowed"
+  }, {
+    "@id" : "_:b152",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.033Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRestrictClientInference(RdfSourceTest.java:277)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b153",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.048Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b154",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b42",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RejectPutModifyingContainmentTriples"
+  }, {
+    "@id" : "_:b155",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b43",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ETagHeadersGet"
+  }, {
+    "@id" : "_:b156",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.054Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b157",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.079Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b158",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b90",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-NoRdfBagSeqOrList"
+  }, {
+    "@id" : "_:b159",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b49",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ContentTypeHeader"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.013Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request failed with valid If-Match header.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testPreconditionRequiredStatusCode(CommonResourceTest.java:353)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b160",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.086Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b161",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b52",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-OptionsAllowHeader"
+  }, {
+    "@id" : "_:b162",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.028Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxResponseBody(RdfSourceTest.java:543)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testResponsePropertiesNotPersisted(RdfSourceTest.java:463)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b163",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.045Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testIsHttp11Manual(CommonResourceTest.java:130)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b164",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b58",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-UseStandardVocabularies"
+  }, {
+    "@id" : "_:b165",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b59",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutRequiresIfMatch"
+  }, {
+    "@id" : "_:b166",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.052Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b167",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.077Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b168",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b64",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-Options"
+  }, {
+    "@id" : "_:b169",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b110",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutReplacesResource"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b18",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-IsHttp11Manual"
+  }, {
+    "@id" : "_:b170",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.083Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b171",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b67",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ReUseVocabularies"
+  }, {
+    "@id" : "_:b172",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.023Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testUseStandardVocabularies(RdfSourceTest.java:257)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b173",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.038Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b174",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b73",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ConformsContainerRdfResource"
+  }, {
+    "@id" : "_:b175",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b118",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ETagHeadersHead"
+  }, {
+    "@id" : "_:b176",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.05Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b177",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b76",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ETagHeadersGet"
+  }, {
+    "@id" : "_:b178",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.081Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b179",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b79",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-GetResource"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.027Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testIsHttp11Manual(CommonResourceTest.java:130)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b180",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b82",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-LdpLinkHeader"
+  }, {
+    "@id" : "_:b181",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b127",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-IsHttp11Manual"
+  }, {
+    "@id" : "_:b182",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b89",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ContainerSupportsHttpLinkHeader"
+  }, {
+    "@id" : "_:b183",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.085Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b184",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b95",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ServerHonorsSlug"
+  }, {
+    "@id" : "_:b185",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b96",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostNonRDFSource"
+  }, {
+    "@id" : "_:b186",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.017Z",
+    "dcterms:description" : "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonContainerTest class\n\tat org.w3.ldp.testsuite.test.BasicContainerTest.testConformsBcLdpContainer(BasicContainerTest.java:42)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b187",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b100",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutSimpleUpdate"
+  }, {
+    "@id" : "_:b188",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b141",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ReUseVocabularies"
+  }, {
+    "@id" : "_:b189",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.051Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.027Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b190",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b105",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-DeleteRemovesContainmentTriple"
+  }, {
+    "@id" : "_:b191",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b106",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RdfTypeLdpContainer"
+  }, {
+    "@id" : "_:b192",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b144",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-Options"
+  }, {
+    "@id" : "_:b193",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b148",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PreconditionRequiredStatusCode"
+  }, {
+    "@id" : "_:b194",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b113",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-AcceptPatchHeader"
+  }, {
+    "@id" : "_:b195",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b153",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-CreateWithoutConstraints"
+  }, {
+    "@id" : "_:b196",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b119",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RelativeUriResolutionPost"
+  }, {
+    "@id" : "_:b197",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.056Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b198",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b123",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-GetResponseHeaders"
+  }, {
+    "@id" : "_:b199",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b160",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutBadETag"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.021Z",
+    "dcterms:description" : "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonResourceTest class\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testConformsRdfSourceLdpResource(RdfSourceTest.java:478)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.04Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReadOnlyProperties4xxStatus(RdfSourceTest.java:401)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b200",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b126",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-DeleteNonRDFSourceDeletesAssociatedResource"
+  }, {
+    "@id" : "_:b201",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b131",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-4xxErrorHasResponseBody"
+  }, {
+    "@id" : "_:b202",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b130",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-TypeRdfSource"
+  }, {
+    "@id" : "_:b203",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b166",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ContainsRdfType"
+  }, {
+    "@id" : "_:b204",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b133",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PatchMethod"
+  }, {
+    "@id" : "_:b205",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b136",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RequestedInteractionModelHeaders"
+  }, {
+    "@id" : "_:b206",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b137",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PublishConstraintsReadOnlyProp"
+  }, {
+    "@id" : "_:b207",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b173",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostResourceAndCheckAssociatedResource"
+  }, {
+    "@id" : "_:b208",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b143",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-AcceptPatchHeader"
+  }, {
+    "@id" : "_:b209",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b146",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-GetResourceAsTurtleNoAccept"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b22",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostResourceGetMetadataAndBinary"
+  }, {
+    "@id" : "_:b210",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b149",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutPropertiesNotPersisted"
+  }, {
+    "@id" : "_:b211",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b152",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-RestrictClientInference"
+  }, {
+    "@id" : "_:b212",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b156",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ConditionFailedStatusCode"
+  }, {
+    "@id" : "_:b213",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b157",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-TypeRdfSource"
+  }, {
+    "@id" : "_:b214",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b183",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RestrictUriReUseSlug"
+  }, {
+    "@id" : "_:b215",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b186",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ConformsBcLdpContainer"
+  }, {
+    "@id" : "_:b216",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b162",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-ResponsePropertiesNotPersisted"
+  }, {
+    "@id" : "_:b217",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b163",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-IsHttp11Manual"
+  }, {
+    "@id" : "_:b218",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b189",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutPropertiesNotPersisted"
+  }, {
+    "@id" : "_:b219",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b167",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PostResponseStatusAndLocation"
+  }, {
+    "@id" : "_:b22",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.041Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b220",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b170",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-NullRelativeUriPost"
+  }, {
+    "@id" : "_:b221",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b172",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-UseStandardVocabularies"
+  }, {
+    "@id" : "_:b222",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b176",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutBadETag"
+  }, {
+    "@id" : "_:b223",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b197",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutToCreate"
+  }, {
+    "@id" : "_:b224",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b178",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-AcceptPatchHeader"
+  }, {
+    "@id" : "_:b23",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.05Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.076Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b26",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-JsonLdRepresentation"
+  }, {
+    "@id" : "_:b26",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.057Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b28",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-ETagHeadersHead"
+  }, {
+    "@id" : "_:b28",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.082Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b29",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.082Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b4",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-Head"
+  }, {
+    "@id" : "_:b30",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b31",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-GetResource"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.089Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b32",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.01Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b33",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b34",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostResourceAndGetFromContainer"
+  }, {
+    "@id" : "_:b34",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.011Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b35",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b36",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-ETagHeadersGet"
+  }, {
+    "@id" : "_:b36",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.022Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b37",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.023Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b38",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b39",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-OptionsHasSameLinkHeader"
+  }, {
+    "@id" : "_:b39",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.033Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.031Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b40",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b41",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-GetResponseHeaders"
+  }, {
+    "@id" : "_:b41",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.048Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b42",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.048Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b43",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.055Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b44",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b45",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutRequiresIfMatch"
+  }, {
+    "@id" : "_:b45",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.054Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b46",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b47",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-LdpLinkHeader"
+  }, {
+    "@id" : "_:b47",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.08Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b48",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.08Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b49",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.086Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.031Z",
+    "dcterms:description" : "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonResourceTest class\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testConformsRdfSourceLdpResource(RdfSourceTest.java:478)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b50",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b51",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-GetResourceAcceptTurtle"
+  }, {
+    "@id" : "_:b51",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.087Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b52",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.018Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b53",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b54",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PublishConstraintsReadOnlyProp"
+  }, {
+    "@id" : "_:b54",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.028Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsReadOnlyProp(RdfSourceTest.java:358)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b55",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b56",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PostResourceGetBinary"
+  }, {
+    "@id" : "_:b56",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.046Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b57",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.046Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b58",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.042Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testUseStandardVocabularies(RdfSourceTest.java:257)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b59",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.052Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b7",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-JsonLdRepresentation"
+  }, {
+    "@id" : "_:b60",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b61",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-AcceptPostResponseHeader"
+  }, {
+    "@id" : "_:b61",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.053Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b62",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b63",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PublishConstraintsUnknownProp"
+  }, {
+    "@id" : "_:b63",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.077Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b64",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.077Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b65",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b66",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-Head"
+  }, {
+    "@id" : "_:b66",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.084Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b67",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.012Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testReUseVocabularies(RdfSourceTest.java:232)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b68",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.025Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.putReplaceResource(RdfSourceTest.java:573)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReplacesResource(RdfSourceTest.java:144)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b69",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b70",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-4xxErrorHasResponseBody"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.047Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b70",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.024Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.test4xxErrorHasResponseBody(RdfSourceTest.java:424)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b71",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b72",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PutReadOnlyProperties4xxStatus"
+  }, {
+    "@id" : "_:b72",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.039Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReadOnlyProperties4xxStatus(RdfSourceTest.java:401)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b73",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.037Z",
+    "dcterms:description" : "org.testng.SkipException: Covered indirectly by the MUST tests defined in RdfSourceTest class\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testConformsContainerRdfResource(CommonContainerTest.java:889)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b74",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b75",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-RelativeUriResolutionPut"
+  }, {
+    "@id" : "_:b75",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.05Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b76",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.057Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b77",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b78",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PreconditionRequiredStatusCode"
+  }, {
+    "@id" : "_:b78",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.081Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b79",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.088Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:manual",
+    "result" : "_:b9",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RestrictClientInference"
+  }, {
+    "@id" : "_:b80",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b81",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-PreferContainmentTriples"
+  }, {
+    "@id" : "_:b81",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.01Z",
+    "dcterms:description" : "java.lang.AssertionError: Container has containment triples when minimal container was requested expected [false] but found [true]\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testPreferContainmentTriples(CommonContainerTest.java:198)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 24 stack frames",
+    "outcome" : "earl:failed"
+  }, {
+    "@id" : "_:b82",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.021Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b83",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b0",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-PutBadETag"
+  }, {
+    "@id" : "_:b84",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b85",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-ConditionFailedStatusCode"
+  }, {
+    "@id" : "_:b85",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.032Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b86",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.032Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: containerAsResource is null\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testRequestedInteractionModelCreateNotAllowed(CommonContainerTest.java:315)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b87",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b88",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-PutSimpleUpdate"
+  }, {
+    "@id" : "_:b88",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.047Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b89",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.053Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.045Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRestrictClientInference(RdfSourceTest.java:277)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b90",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.079Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b91",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b92",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RestrictPutReUseUri"
+  }, {
+    "@id" : "_:b92",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.079Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b93",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "MemberResourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b94",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:MemberResource-OptionsAllowHeader"
+  }, {
+    "@id" : "_:b94",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.086Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b95",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.085Z",
+    "outcome" : "earl:passed"
+  }, {
+    "@id" : "_:b96",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.014Z",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b97",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "BasicContainerTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b98",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:BasicContainer-RelativeUriResolutionPut"
+  }, {
+    "@id" : "_:b98",
+    "@type" : "earl:TestResult",
+    "date" : "2015-03-18T22:34:48.018Z",
+    "dcterms:description" : "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRelativeUriResolutionPut(RdfSourceTest.java:79)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames",
+    "outcome" : "earl:untested"
+  }, {
+    "@id" : "_:b99",
+    "@type" : "earl:Assertion",
+    "ldpt:ranAsClass" : "NonRDFSourceTest",
+    "assertedBy" : "http://github.com/UnissonCo/glutton",
+    "mode" : "earl:automatic",
+    "result" : "_:b19",
+    "subject" : "http://github.com/UnissonCo/glutton",
+    "test" : "ldpt:NonRDFSource-Options"
+  }, {
+    "@id" : "http://github.com/UnissonCo/glutton",
+    "@type" : [ "doap:Project", "earl:Software", "earl:TestSubject", "earl:Assertor" ],
+    "title" : "Glutton",
+    "developer" : "_:b139",
+    "homepage" : "http://github.com/UnissonCo/glutton",
+    "name" : "glutton",
+    "programming-language" : "Python"
+  } ],
+  "@id" : "urn:x-arq:DefaultGraphNode",
+  "@context" : {
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "outcome" : {
+      "@id" : "http://www.w3.org/ns/earl#outcome",
+      "@type" : "@id"
+    },
+    "result" : {
+      "@id" : "http://www.w3.org/ns/earl#result",
+      "@type" : "@id"
+    },
+    "ranAsClass" : {
+      "@id" : "http://w3c.github.io/ldp-testsuite/manifest#ranAsClass",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "assertedBy" : {
+      "@id" : "http://www.w3.org/ns/earl#assertedBy",
+      "@type" : "@id"
+    },
+    "mode" : {
+      "@id" : "http://www.w3.org/ns/earl#mode",
+      "@type" : "@id"
+    },
+    "test" : {
+      "@id" : "http://www.w3.org/ns/earl#test",
+      "@type" : "@id"
+    },
+    "subject" : {
+      "@id" : "http://www.w3.org/ns/earl#subject",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "programming-language" : "http://usefulinc.com/ns/doap#programming-language",
+    "homepage" : "http://usefulinc.com/ns/doap#homepage",
+    "name" : "http://usefulinc.com/ns/doap#name",
+    "title" : "http://purl.org/dc/terms/title",
+    "developer" : {
+      "@id" : "http://usefulinc.com/ns/doap#developer",
+      "@type" : "@id"
+    },
+    "rdft" : "http://www.w3.org/ns/rdftest#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "earl" : "http://www.w3.org/ns/earl#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "mf" : "http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#",
+    "td" : "http://www.w3.org/2006/03/test-description#",
+    "doap" : "http://usefulinc.com/ns/doap#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "ldpt" : "http://w3c.github.io/ldp-testsuite/manifest#"
+  }
+}

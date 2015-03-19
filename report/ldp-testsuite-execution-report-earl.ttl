@@ -1,0 +1,1392 @@
+@prefix rdft:  <http://www.w3.org/ns/rdftest#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix earl:  <http://www.w3.org/ns/earl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix td:    <http://www.w3.org/2006/03/test-description#> .
+@prefix mf:    <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix ldpt:  <http://w3c.github.io/ldp-testsuite/manifest#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.021Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonResourceTest class\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testConformsRdfSourceLdpResource(RdfSourceTest.java:478)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ConformsRdfSourceLdpResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.031Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-Head
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.047Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-JsonLdRepresentation
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.045Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRestrictClientInference(RdfSourceTest.java:277)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RestrictClientInference
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.078Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-GetResourceAsTurtleNoAccept
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.013Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request failed with valid If-Match header.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testPreconditionRequiredStatusCode(CommonResourceTest.java:353)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PreconditionRequiredStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.027Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testIsHttp11Manual(CommonResourceTest.java:130)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-IsHttp11Manual
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.041Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostResourceGetMetadataAndBinary
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.057Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-JsonLdRepresentation
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.082Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ETagHeadersHead
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.089Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-GetResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.011Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostResourceAndGetFromContainer
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.022Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-ETagHeadersGet
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.033Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-OptionsHasSameLinkHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.048Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-GetResponseHeaders
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.054Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutRequiresIfMatch
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-LdpLinkHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.087Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-GetResourceAcceptTurtle
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.028Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsReadOnlyProp(RdfSourceTest.java:358)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PublishConstraintsReadOnlyProp
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.046Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostResourceGetBinary
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.053Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-AcceptPostResponseHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.077Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PublishConstraintsUnknownProp
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.084Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-Head
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.024Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.test4xxErrorHasResponseBody(RdfSourceTest.java:424)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-4xxErrorHasResponseBody
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.039Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReadOnlyProperties4xxStatus(RdfSourceTest.java:401)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutReadOnlyProperties4xxStatus
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-RelativeUriResolutionPut
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.081Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PreconditionRequiredStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "java.lang.AssertionError: Container has containment triples when minimal container was requested expected [false] but found [true]\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testPreferContainmentTriples(CommonContainerTest.java:198)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 24 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:failed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PreferContainmentTriples
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.021Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PutBadETag
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.032Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-ConditionFailedStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.047Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutSimpleUpdate
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.079Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RestrictPutReUseUri
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.086Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-OptionsAllowHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.018Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRelativeUriResolutionPut(RdfSourceTest.java:79)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RelativeUriResolutionPut
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.027Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-Options
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.042Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PutRequiresIfMatch
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.052Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ContainsRdfType
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.076Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RestrictUriReUseNoSlug
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.083Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ConditionFailedStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.011Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-GetResponseHeaders
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.033Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-ETagHeadersHead
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.049Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PostNoSlug
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.056Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ResponsePropertiesNotPersisted
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PostJsonLd
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.088Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-Head
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.031Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonResourceTest class\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testConformsRdfSourceLdpResource(RdfSourceTest.java:478)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ConformsRdfSourceLdpResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.046Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-GetResourceAcceptTurtle
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.053Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-OptionsAllowHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.084Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PostContainer
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.013Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxConstrainedBy(RdfSourceTest.java:490)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsUnknownProp(RdfSourceTest.java:380)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PublishConstraintsUnknownProp
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.025Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.putReplaceResource(RdfSourceTest.java:573)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReplacesResource(RdfSourceTest.java:144)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutReplacesResource
+] .
+
+<http://github.com/UnissonCo/glutton>
+        a                          doap:Project , earl:Software , earl:TestSubject , earl:Assertor ;
+        dcterms:title              "Glutton" ;
+        doap:developer             [ a          foaf:Person ;
+                                     foaf:name  "Guillaume Libersat"
+                                   ] ;
+        doap:homepage              "http://github.com/UnissonCo/glutton" ;
+        doap:name                  "glutton" ;
+        doap:programming-language  "Python" .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutReadOnlyProperties4xxStatus(RdfSourceTest.java:401)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutReadOnlyProperties4xxStatus
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-AcceptTurtle
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.082Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-LdpLinkHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostResourceAndCheckLink
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.023Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-GetResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.032Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: containerAsResource is null\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testRequestedInteractionModelCreateNotAllowed(CommonContainerTest.java:315)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RequestedInteractionModelCreateNotAllowed
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.048Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RejectPutModifyingContainmentTriples
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.055Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ETagHeadersGet
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.079Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-NoRdfBagSeqOrList
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.086Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ContentTypeHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.018Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-OptionsAllowHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.042Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testUseStandardVocabularies(RdfSourceTest.java:257)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-UseStandardVocabularies
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.052Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutRequiresIfMatch
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.077Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-Options
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.083Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutReplacesResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.012Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testReUseVocabularies(RdfSourceTest.java:232)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ReUseVocabularies
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.037Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.testng.SkipException: Covered indirectly by the MUST tests defined in RdfSourceTest class\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testConformsContainerRdfResource(CommonContainerTest.java:889)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ConformsContainerRdfResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.049Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ETagHeadersHead
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.057Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ETagHeadersGet
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.088Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-GetResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.021Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-LdpLinkHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.031Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-IsHttp11Manual
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.053Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ContainerSupportsHttpLinkHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.085Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ServerHonorsSlug
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.014Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostNonRDFSource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.027Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because there are restrictions on PUT content for this resource. The requirement needs to be tested manually.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.putReplaceResource(RdfSourceTest.java:573)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutSimpleUpdate(RdfSourceTest.java:158)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutSimpleUpdate
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.041Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testReUseVocabularies(RdfSourceTest.java:232)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ReUseVocabularies
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.051Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-DeleteRemovesContainmentTriple
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.076Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RdfTypeLdpContainer
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.082Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-Options
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.011Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PreconditionRequiredStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.023Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-AcceptPatchHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.048Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-CreateWithoutConstraints
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.055Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RelativeUriResolutionPost
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.08Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-GetResponseHeaders
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.086Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutBadETag
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.019Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-DeleteNonRDFSourceDeletesAssociatedResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.044Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.test4xxErrorHasResponseBody(RdfSourceTest.java:424)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-4xxErrorHasResponseBody
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.047Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-TypeRdfSource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.052Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ContainsRdfType
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.078Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PatchMethod
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.012Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: containerAsResource is null\n\tat org.w3.ldp.testsuite.test.CommonContainerTest.testRequestedInteractionModelHeaders(CommonContainerTest.java:351)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RequestedInteractionModelHeaders
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.026Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because we have no read-only properties to PUT. Server-managed properties are specified using the \"read-only-prop\" command-line parameter.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPublishConstraintsReadOnlyProp(RdfSourceTest.java:358)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PublishConstraintsReadOnlyProp
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "NonRDFSourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.038Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:NonRDFSource-PostResourceAndCheckAssociatedResource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.057Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-AcceptPatchHeader
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.089Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-GetResourceAsTurtleNoAccept
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.022Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testPutPropertiesNotPersisted(RdfSourceTest.java:445)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-PutPropertiesNotPersisted
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.033Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testRestrictClientInference(RdfSourceTest.java:277)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-RestrictClientInference
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.054Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ConditionFailedStatusCode
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.079Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-TypeRdfSource
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.085Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-RestrictUriReUseSlug
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.017Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.testng.SkipException: Covered indirectly by the MUST tests defined in CommonContainerTest class\n\tat org.w3.ldp.testsuite.test.BasicContainerTest.testConformsBcLdpContainer(BasicContainerTest.java:42)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-ConformsBcLdpContainer
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.028Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipException: Skipping test because PUT request was successful.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxStatus(RdfSourceTest.java:533)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.expectPut4xxResponseBody(RdfSourceTest.java:543)\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testResponsePropertiesNotPersisted(RdfSourceTest.java:463)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-ResponsePropertiesNotPersisted
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "MemberResourceTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.045Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.CommonResourceTest.testIsHttp11Manual(CommonResourceTest.java:130)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:MemberResource-IsHttp11Manual
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.051Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutPropertiesNotPersisted
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.077Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PostResponseStatusAndLocation
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.083Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-NullRelativeUriPost
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:manual ;
+  earl:result      [ a                    earl:TestResult ;
+                     dcterms:date         "2015-03-18T22:34:48.023Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     dcterms:description  "org.w3.ldp.testsuite.exception.SkipNotTestableException: This requirement or recommendation must be tested manually. It is difficult or impossible to write automated tests for and is not part of the testsuite.\n\tat org.w3.ldp.testsuite.test.RdfSourceTest.testUseStandardVocabularies(RdfSourceTest.java:257)\n\tat org.w3.ldp.testsuite.LdpTestSuite.run(LdpTestSuite.java:379)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:415)\n\tat org.w3.ldp.testsuite.LdpTestSuite.executeTestSuite(LdpTestSuite.java:407)\n\tat org.w3.ldp.testsuite.RunLdpTestSuite.main(RunLdpTestSuite.java:26)\n... Removed 21 stack frames"^^<http://www.w3.org/2001/XMLSchema#string> ;
+                     earl:outcome         earl:untested
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-UseStandardVocabularies
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutBadETag
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.056Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-PutToCreate
+] .
+
+[ a                earl:Assertion ;
+  ldpt:ranAsClass  "BasicContainerTest"^^<http://www.w3.org/2001/XMLSchema#string> ;
+  earl:assertedBy  <http://github.com/UnissonCo/glutton> ;
+  earl:mode        earl:automatic ;
+  earl:result      [ a             earl:TestResult ;
+                     dcterms:date  "2015-03-18T22:34:48.081Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                     earl:outcome  earl:passed
+                   ] ;
+  earl:subject     <http://github.com/UnissonCo/glutton> ;
+  earl:test        ldpt:BasicContainer-AcceptPatchHeader
+] .
