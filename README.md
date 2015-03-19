@@ -2,13 +2,21 @@ Glutton
 =======
 
 An [asyncio](https://www.python.org/dev/peps/pep-3156/) implementation
-of a [Linked Data Platform 1.0](http://www.w3.org/TR/ldp/) in Python.
+of a [Linked Data Platform 1.0](http://www.w3.org/TR/ldp/) Server in Python3.
+
+
+[![Support via Gratipay](http://img.shields.io/gratipay/glibersat.svg)](https://gratipay.com/glibersat/)
 
 
 Current Status
 --------------
 
-Working, but limited support (Create, Read, Delete. No Update yet).
+Alpha.
+
+CRUD operations on RDF Sources but there are
+known stability issues.
+
+No Non-RDF Sources support yet.
 
 You can track the progress via the
 [Glutton conformance report](http://unissonco.github.io/glutton/)
