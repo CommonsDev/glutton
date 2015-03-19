@@ -2,8 +2,9 @@ import logging
 import asyncio
 
 import aiohttp.web
-
 import api_hour
+
+from depot.manager import DepotManager
 
 from .engines import rdf
 from . import endpoints
@@ -22,8 +23,8 @@ class Container(api_hour.Container):
         # If you do that, you need to listen on two ports with api_hour --bind command line.
         self.servers['http'] = aiohttp.web.Application(loop=kwargs['loop'])
         self.servers['http']['ah_container'] = self # keep a reference to Container
-        # routes
 
+        # routes
         ldprRDF_routes = endpoints.index.LDPRDFSourceResourceView()
         self.servers['http'].router.add_route('GET',
                                               r'/{path:.*}',
@@ -68,6 +69,15 @@ class Container(api_hour.Container):
     def start(self):
         yield from super().start()
         LOG.info('Starting engines...')
+
+        ## File Depot
+        self.filedepot = None
+        if 'storage' in self.config:
+            for storage_configs in self.config['storage']:
+                for name in storage_configs.keys():
+                    DepotManager.configure(name, storage_configs[name])
+
+            self.filedepot = DepotManager.get()
 
         if 'triplestore' in self.config['engines']:
             ts_config = self.config['engines']['triplestore']

@@ -5,3 +5,7 @@ engines:
     uri:
       - http://localhost:3030/glutton/query
       - http://localhost:3030/glutton/update
+
+storage:
+  - default:
+      depot.storage_path: './files'

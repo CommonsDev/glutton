@@ -7,6 +7,18 @@ from .exceptions import LDPHTTPConditionFailed
 from .namespace import LDP
 from .misc import get_ldpr_from_request
 
+def ldp_server_headers(view):
+    """
+    Standard LDP Server headers
+    """
+    def wrapped(instance, request):
+        response = yield from view(instance, request)
+        response.headers.add('Link', "<http://www.w3.org/ns/ldp#Resource>; rel=\"type\"")
+        return response
+
+    return wrapped
+
+
 def ldpr_exists_or_404(view):
     """
     raise exception if not exist or was deleted
@@ -17,10 +29,11 @@ def ldpr_exists_or_404(view):
         ldpr_ref = get_ldpr_from_request(request)
 
         # Check if current node exist
-        exists = yield from node_exists(container, ldpr_ref)
         deleted = yield from node_is_deleted(container, ldpr_ref)
-        if not exists or deleted:
-            raise HTTPNotFound(reason='There is no such resource')
+        if not deleted:
+            rdf_exists = yield from node_exists(container, ldpr_ref)
+            if not rdf_exists:
+                raise HTTPNotFound(reason='There is no such resource')
 
         response = yield from view(instance, request)
 
@@ -43,15 +56,15 @@ def check_weak_etag(view):
         modification_date = yield from ldpr_modification_date(container, ldpr_ref)
         if modification_date:
             current_etag = 'W/"{0}"'.format(hashlib.md5(modification_date).hexdigest())
-            print("current etag " + current_etag)
+            # print("current etag " + current_etag)
 
         # If we have an etag, Check if we match condition before processing request
         if current_etag:
             if_match = request.headers.get('If-Match')
             if_none_match = request.headers.get('If-None-Match')
 
-            print("if match " + str(if_match))
-            print("if none match " + str(if_none_match))
+            # print("if match " + str(if_match))
+            # print("if none match " + str(if_none_match))
 
             if if_match:
                 etag_list = [tag.strip() for tag in if_match.split(',')]
@@ -94,11 +107,11 @@ def method_capabilities_headers(view):
 
         # HTTP POST Allowed formats
         if 'POST' in allowed_methods:
-            response.headers.add('Accept-post', ", ".join(instance.accepted_post_formats))
+            response.headers.add('Accept-post', ", ".join(instance.accepted_rdf_post_formats + instance.accepted_nonrdf_post_formats))
 
         # HTTP PATCH Allowed formats
         if 'PATCH' in allowed_methods:
-            response.headers.add('Accept-patch', ", ".join(instance.accepted_post_formats))
+            response.headers.add('Accept-patch', ", ".join(instance.accepted_rdf_post_formats + instance.accepted_nonrdf_post_formats))
 
         return response
     return wrapper

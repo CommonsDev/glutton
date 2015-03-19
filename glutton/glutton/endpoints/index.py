@@ -16,7 +16,8 @@ import uuid
 
 from ..services.data import ldpr_get, ldpr_new, ldpr_delete, ldpr_modification_date
 from ..services.data import node_exists, node_has_type, node_is_deleted, node_objects
-from ..utils.decorators import method_capabilities_headers, check_weak_etag, ldpr_exists_or_404
+from ..services.static import ldpr_nr_new
+from ..utils.decorators import method_capabilities_headers, check_weak_etag, ldpr_exists_or_404, ldp_server_headers
 from ..utils.exceptions import HTTPPreconditionRequired, LDPHTTPConflict
 from ..utils.misc import (get_hashid_for_node, get_node_by_hashid,
                           resolve_accept_header_to_rdflib_format,
@@ -53,9 +54,11 @@ class RDFGraphResponse(Response):
 
 class LDPRDFSourceResourceView(object):
     allowed_methods = ('POST', 'PATCH', 'PUT', 'GET', 'OPTIONS', 'HEAD')
-    accepted_post_formats = ('text/turtle', 'application/ld+json')
+    accepted_rdf_post_formats = ('text/turtle', 'application/ld+json')
+    accepted_nonrdf_post_formats = ('image/png',)
 
     @asyncio.coroutine
+    @ldp_server_headers
     @ldpr_exists_or_404
     def delete(self, request):
         """
@@ -77,6 +80,7 @@ class LDPRDFSourceResourceView(object):
         return Response()
 
     @asyncio.coroutine
+    @ldp_server_headers
     @ldpr_exists_or_404
     @method_capabilities_headers
     def options(self, request):
@@ -87,6 +91,7 @@ class LDPRDFSourceResourceView(object):
         return HTTPNoContent()
 
     @asyncio.coroutine
+    @ldp_server_headers
     @ldpr_exists_or_404
     def patch(self, request):
         yield
@@ -94,6 +99,7 @@ class LDPRDFSourceResourceView(object):
 
     @asyncio.coroutine
     @check_weak_etag
+    @ldp_server_headers
     def put(self, request):
         """
         Replace a LDPR at the given URI
@@ -148,6 +154,7 @@ class LDPRDFSourceResourceView(object):
         return response
 
     @asyncio.coroutine
+    @ldp_server_headers
     def post(self, request):
         """
         Create a new LDPR inside a LDPC
@@ -156,12 +163,37 @@ class LDPRDFSourceResourceView(object):
 
         ldpc_ref = get_ldpr_from_request(request)
 
+        # FIXME: Check 5.2.3.4
         # FIXME I removed this so the tests now pass, but still it feels strange to allow LDPR
         # creation when not linked to a LDPC.
-        # has_type = yield from node_has_type(container, ldpc_ref, LDP.BasicContainer)
-        # if not has_type:
-        #     raise HTTPMethodNotAllowed(method='POST', allowed_methods=('GET', 'OPTIONS', 'HEAD')) # FIXME Hardcoded
+        #has_type = yield from node_has_type(container, ldpc_ref, LDP.BasicContainer)
+        #if not has_type:
+        #    raise HTTPMethodNotAllowed(method='POST', allowed_methods=('GET', 'OPTIONS', 'HEAD')) # FIXME Hardcoded
 
+        # Find future LDPR URI
+        free_slug = yield from self._find_free_slug(container, request, ldpc_ref)
+        ldpr_ref = ldpc_ref + "/" + free_slug
+
+        ct = request.headers.get("content-type").split(";")[0] # FIXME: Better
+        # We have a LDPR-RS
+        if ct in self.accepted_rdf_post_formats:
+            # Parse input file
+            client_graph = Graph()
+            client_graph = yield from feed_graph_from_request(ldpr_ref, client_graph, request)
+
+            # Now we have the file as a temporary graph, store it to the backstore
+            yield from ldpr_new(container, ldpr_ref, client_graph, ldpc_ref)
+
+        # We have a LDPR-NR
+        elif ct in self.accepted_nonrdf_post_formats:
+            data = yield from request.read()
+            ldpr_ref = yield from ldpr_nr_new(container, data, ldpc_ref)
+
+        headers = CIMultiDict([('Location', ldpr_ref)])
+        return HTTPCreated(headers=headers)
+
+
+    def _find_free_slug(self, container, request, ldpc_ref):
         # Compute a potentiel future slug for the newly created ldpr
         suggested_slug = request.headers.get("Slug", None)
 
@@ -180,19 +212,11 @@ class LDPRDFSourceResourceView(object):
         else:
             future_slug = str(uuid.uuid4())
 
-        ldpr_ref = ldpc_ref + "/" + future_slug
+        return future_slug
 
-        # Parse input file
-        client_graph = Graph()
-        client_graph = yield from feed_graph_from_request(ldpr_ref, client_graph, request)
-
-        # Now we have the file as a temporary graph, store it to the backstore
-        yield from ldpr_new(container, ldpr_ref, client_graph, ldpc_ref)
-
-        headers = CIMultiDict([('Location', ldpr_ref)])
-        return HTTPCreated(headers=headers)
 
     @asyncio.coroutine
+    @ldp_server_headers
     @ldpr_exists_or_404
     @check_weak_etag
     @method_capabilities_headers
@@ -217,7 +241,7 @@ class LDPRDFSourceResourceView(object):
         for triple in ldpr_get(container, ldpr_ref):
             response_graph.add(triple)
 
-        headers = CIMultiDict([('Link', "<http://www.w3.org/ns/ldp#Resource>; rel=\"type\"")])
+        headers = CIMultiDict()
 
         if (ldpr_ref, RDF.type, LDP.BasicContainer) in response_graph:
             headers.add('Link', "<http://www.w3.org/ns/ldp#BasicContainer>; rel=\"type\"")
@@ -228,6 +252,7 @@ class LDPRDFSourceResourceView(object):
         return response
 
     @asyncio.coroutine
+    @ldp_server_headers
     @ldpr_exists_or_404
     @check_weak_etag
     @method_capabilities_headers
@@ -249,7 +274,7 @@ class LDPRDFSourceResourceView(object):
         for triple in ldpr_get(container, ldpr_ref):
             response_graph.add(triple)
 
-        headers = CIMultiDict([('Link', "<http://www.w3.org/ns/ldp#Resource>; rel=\"type\"")])
+        headers = CIMultiDict()
 
         if (ldpr_ref, RDF.type, LDP.BasicContainer) in response_graph:
             headers.add('Link', "<http://www.w3.org/ns/ldp#BasicContainer>; rel=\"type\"")

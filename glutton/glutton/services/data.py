@@ -5,7 +5,7 @@ import logging
 from random import randint
 import rdflib
 from rdflib import Graph
-from rdflib.namespace import RDF, FOAF, DCTERMS
+from rdflib.namespace import RDF, DCTERMS
 from rdflib import URIRef, Namespace, Literal
 
 from ..utils.namespace import LDP, GLUTTON
@@ -13,7 +13,7 @@ from ..utils.namespace import LDP, GLUTTON
 LOG = logging.getLogger(__name__)
 
 """
-You can add your business logic here
+RDF Data handling
 """
 
 @asyncio.coroutine
