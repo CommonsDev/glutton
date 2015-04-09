@@ -6,6 +6,7 @@ import aiohttp.web
 import api_hour
 
 from .engines import rdf
+from .utils.middlewares import cors_factory
 from . import endpoints
 
 LOG = logging.getLogger(__name__)
@@ -20,7 +21,7 @@ class Container(api_hour.Container):
         ## Servers
         # You can define several servers, to listen HTTP and SSH for example.
         # If you do that, you need to listen on two ports with api_hour --bind command line.
-        self.servers['http'] = aiohttp.web.Application(loop=kwargs['loop'])
+        self.servers['http'] = aiohttp.web.Application(middlewares=[cors_factory], loop=kwargs['loop'])
         self.servers['http']['ah_container'] = self # keep a reference to Container
         # routes
 

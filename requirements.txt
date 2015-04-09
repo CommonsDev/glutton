@@ -1,5 +1,6 @@
+cython
 ujson>=1.33
-aiohttp>=0.14.4
+aiohttp>=0.15.1
 api_hour>=0.6.2
 sparqlwrapper>=1.6.4
 rdflib>=4.2.0

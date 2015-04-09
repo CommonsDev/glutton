@@ -7,6 +7,17 @@ from .exceptions import LDPHTTPConditionFailed
 from .namespace import LDP
 from .misc import get_ldpr_from_request
 
+def ldp_server_headers(view):
+    """
+    Standard LDP Server headers
+    """
+    def wrapped(instance, request):
+        response = yield from view(instance, request)
+        response.headers.add('Link', "<http://www.w3.org/ns/ldp#Resource>; rel=\"type\"")
+        return response
+
+    return wrapped
+
 def ldpr_exists_or_404(view):
     """
     raise exception if not exist or was deleted
